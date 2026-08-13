@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albany High PTSA — Scholarships</title>
+<style>
+  :root {
+    --navy: #1c2f6b; --navy-deep: #15224e; --royal: #2f4bad; --silver: #8f9bb7;
+    --gold: #c19a3e; --ground: #eef1f6; --card: #ffffff; --ink: #172038;
+    --ink-soft: #4a5570; --line: #dbe1ec;
+    --shadow: 0 1px 2px rgba(21,34,78,.06), 0 8px 24px rgba(21,34,78,.08);
+    --maxw: 960px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy: #4a63bd; --navy-deep: #0e1424; --royal: #7d93e6; --silver: #7683a3;
+      --gold: #d8b25a; --ground: #0e1424; --card: #18213a; --ink: #e9edf7;
+      --ink-soft: #a4afca; --line: #283350;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --navy: #4a63bd; --navy-deep: #0e1424; --royal: #7d93e6; --silver: #7683a3;
+    --gold: #d8b25a; --ground: #0e1424; --card: #18213a; --ink: #e9edf7;
+    --ink-soft: #a4afca; --line: #283350;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+  }
+  :root[data-theme="light"] {
+    --navy: #1c2f6b; --navy-deep: #15224e; --royal: #2f4bad; --silver: #8f9bb7;
+    --gold: #c19a3e; --ground: #eef1f6; --card: #ffffff; --ink: #172038;
+    --ink-soft: #4a5570; --line: #dbe1ec;
+    --shadow: 0 1px 2px rgba(21,34,78,.06), 0 8px 24px rgba(21,34,78,.08);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+  .banner-strip { background: #ffffff; padding: 22px 20px 20px; border-bottom: 3px solid var(--navy); }
+  .banner-strip img { display: block; width: 100%; max-width: var(--maxw); margin: 0 auto; height: auto; border-radius: 4px; }
+  .intro { background: var(--navy-deep); color: #eaf0ff; padding: 30px 0 34px; }
+  .intro .wrap { display: flex; flex-direction: column; gap: 10px; }
+  .intro h1 { margin: 0; font-size: clamp(1.5rem, 3.4vw, 2.15rem); font-weight: 800; letter-spacing: .01em; text-wrap: balance; color: #fff; }
+  .intro p { margin: 0; max-width: 66ch; color: #c4d0f0; font-size: 1.02rem; }
+  .intro .say { color: #fff; font-weight: 600; }
+  main { padding: 34px 0 8px; }
+  .impact { margin: 0 0 34px; }
+  .impact h2 { margin: 0 0 12px; font-size: 1.05rem; font-weight: 800; color: var(--ink); letter-spacing: .01em; }
+  .stats { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 560px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); }
+  .stat .lbl { font-size: .7rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); }
+  .stat .val { margin-top: 5px; font-size: 1.0rem; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .stat .val b { color: var(--navy); font-weight: 800; }
+  .scope { margin-bottom: 40px; }
+  .scope-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--line); }
+  .scope-head h2 { margin: 0; font-size: 1.32rem; font-weight: 800; color: var(--ink); letter-spacing: .005em; }
+  .scope-head .count { color: var(--ink-soft); font-size: .9rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 680px) { .cards { grid-template-columns: 1fr 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 20px 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(21,34,78,.10), 0 16px 40px rgba(21,34,78,.14); border-color: var(--silver); }
+  .card .top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .eyebrow { font-size: .68rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; color: #fff; background: var(--navy); }
+  .eyebrow.state { background: var(--royal); }
+  .eyebrow.national { background: var(--gold); color: #2a2100; }
+  .eyebrow.falcon { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+  .card h3 { margin: 0; font-size: 1.12rem; font-weight: 750; color: var(--ink); line-height: 1.3; text-wrap: balance; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: .96rem; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
+  .chip { font-size: .78rem; font-weight: 600; color: var(--ink); background: var(--ground); border: 1px solid var(--line); border-radius: 6px; padding: 4px 9px; display: inline-flex; align-items: center; gap: 5px; }
+  .chip.due { border-color: var(--gold); color: var(--ink); }
+  .chip b { font-weight: 800; }
+  .card a.apply { margin-top: auto; align-self: flex-start; text-decoration: none; font-weight: 700; font-size: .92rem; color: var(--royal); display: inline-flex; align-items: center; gap: 6px; border-bottom: 2px solid transparent; padding-bottom: 1px; }
+  .card a.apply:hover { border-bottom-color: var(--royal); }
+  .card a.apply:focus-visible { outline: 2px solid var(--royal); outline-offset: 3px; border-radius: 2px; }
+  .win { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); color: #fff; border-radius: 16px; padding: 28px 26px; margin: 8px 0 44px; box-shadow: var(--shadow); }
+  .win h2 { margin: 0 0 8px; font-size: 1.35rem; font-weight: 800; color: #fff; }
+  .win p { margin: 0; color: #c9d4f4; max-width: 62ch; }
+  .win .star { color: var(--gold); }
+  .win a.btn { display: inline-block; margin-top: 16px; background: var(--gold); color: #2a2100; text-decoration: none; font-weight: 800; padding: 11px 20px; border-radius: 10px; }
+  .win a.btn:hover { filter: brightness(1.06); }
+  .win a.btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  footer { border-top: 3px solid var(--navy); background: var(--card); }
+  footer .wrap { padding: 24px 20px 30px; display: flex; flex-direction: column; gap: 4px; }
+  footer .name { font-weight: 800; color: var(--ink); letter-spacing: .02em; }
+  footer .tag { color: var(--navy); font-weight: 700; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; }
+  footer .fine { color: var(--ink-soft); font-size: .82rem; margin-top: 6px; max-width: 70ch; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+</head>
+<body>
+<header class="banner-strip">
+  <img src="assets/banner.png" alt="Albany High School PTSA — Together. Supporting. Empowering. Every Student. Home of the Falcons.">
+</header>
+<section class="intro">
+  <div class="wrap">
+    <h1>Scholarship Opportunities for Albany High Students</h1>
+    <p>Real scholarships for Albany High seniors and families — local, statewide, and national — kept current by the PTSA. <span class="say">Won one? Scroll down and tell us.</span></p>
+  </div>
+</section>
+<main class="wrap">
+  <section class="impact">
+    <h2>Our impact</h2>
+    <div class="stats">
+    <div class="stat"><div class="lbl">This month</div><div class="val"><b>8</b> identified · <b>0</b> secured</div></div>
+    <div class="stat"><div class="lbl">This quarter</div><div class="val"><b>8</b> identified · <b>0</b> secured</div></div>
+    <div class="stat"><div class="lbl">This school year</div><div class="val"><b>8</b> identified · <b>0</b> secured</div></div>
+    </div>
+  </section>
+  <section class="scope">
+    <div class="scope-head"><h2>Local &amp; Capital Region</h2><span class="count">1 opportunity</span></div>
+    <div class="cards">
+    <div class="card">
+      <div class="top"><span class="eyebrow">Capital Region</span></div>
+      <h3>Community Foundation for the Greater Capital Region -- Universal Scholarship Application</h3>
+      <p>One universal application qualifies a student for 30+ named local scholarships across the Capital Region.</p>
+      <div class="meta"><span class="chip"><b>30+ awards</b></span><span class="chip due">Reopens December</span></div>
+      <a class="apply" href="https://cfgcr.org/scholarships/" target="_blank" rel="noopener">Learn more &amp; apply →</a>
+    </div>
+    </div>
+  </section>
+  <section class="win">
+    <h2><span class="star">★</span> Won a scholarship?</h2>
+    <p>Every award an Albany High student earns is worth celebrating — and it helps the PTSA show families this work pays off. Tell us about it.</p>
+    <p style="margin-top:14px;color:#fff;font-weight:600">Let any PTSA board member know — we celebrate every win.</p>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span class="name">Albany High School PTSA</span>
+    <span class="tag">Home of the Falcons</span>
+    <span class="fine">Updated automatically by the PTSA — last updated Aug 13, 2026, 00:22 EST. Scholarship details are summaries; always confirm amounts and deadlines on the official application page before applying.</span>
+  </div>
+</footer>
+</body>
+</html>
