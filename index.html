@@ -47,6 +47,9 @@
   main { padding: 34px 0 8px; }
   .impact { margin: 0 0 34px; }
   .impact h2 { margin: 0 0 12px; font-size: 1.05rem; font-weight: 800; color: var(--ink); letter-spacing: .01em; }
+  .impact-total { background: var(--navy); border-radius: 12px; padding: 16px 22px; margin: 0 0 14px; box-shadow: var(--shadow); display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .impact-total b { font-size: clamp(1.6rem, 4vw, 2.1rem); font-weight: 800; color: var(--gold); font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+  .impact-total span { color: #e8ecf5; font-size: 1rem; font-weight: 600; }
   .stats { display: grid; grid-template-columns: 1fr; gap: 12px; }
   @media (min-width: 560px) { .stats { grid-template-columns: repeat(3, 1fr); } }
   .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); }
@@ -103,6 +106,7 @@
 <main class="wrap">
   <section class="impact">
     <h2>Our impact</h2>
+    <div class="impact-total"><b>$500,000+</b><span>in scholarships listed for Albany High students</span></div>
     <div class="stats">
     <div class="stat"><div class="lbl">This month</div><div class="val"><b>44</b> identified · <b>0</b> secured</div></div>
     <div class="stat"><div class="lbl">This quarter</div><div class="val"><b>44</b> identified · <b>0</b> secured</div></div>
@@ -393,7 +397,7 @@
   <div class="wrap">
     <span class="name">Albany High School PTSA</span>
     <span class="tag">Home of the Falcons</span>
-    <span class="fine">Updated automatically by the PTSA — last updated Aug 13, 2026, 02:48 EST. Scholarship details are summaries; always confirm amounts and deadlines on the official application page before applying.</span>
+    <span class="fine">Updated automatically by the PTSA — last updated Aug 13, 2026, 02:57 EST. Scholarship details are summaries; always confirm amounts and deadlines on the official application page before applying.</span>
   </div>
 </footer>
 </body>
